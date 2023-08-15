@@ -2,20 +2,17 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
-// add functionality for trending and random endpoints
-// add a try...catch block
-
 function getGif(keyword) {
   let request = new XMLHttpRequest();
-  console.log(request);
   const url = `http://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=${process.env.API_KEY}`;
+
 
   request.addEventListener("loadend", function() {
     const response = JSON.parse(this.responseText);
     if (this.status === 200) {
       printElements(response, keyword);
     } else {
-      printError(this, keyword);
+      printError(response, keyword);
     }
   });
 
@@ -23,8 +20,8 @@ function getGif(keyword) {
   request.send();
 }
 
-function printError(request, keyword) {
-  document.querySelector("#showGifs").innerHTML = `There was an error accessing gifs for ${keyword}: ${request.status} ${request.statusText}`;
+function printError(apiResponse, keyword) {
+  document.querySelector("#showGifs").innerHTML = `There was an error accessing gifs for ${keyword}: ${apiResponse.meta.status} ${apiResponse.meta.msg}`;
 }
 
 function printElements(apiResponse) {
