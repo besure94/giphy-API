@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>Giphy</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Search for GIFs below!</h1>
-      <p>To search for GIFs, simply enter a keyword(s), such as:</p>
-      <pre>
+
+<head>
+  <title>Giphy</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Search for GIFs below!</h1>
+    <p>To search for GIFs, simply enter a keyword(s), such as:</p>
+    <pre>
         Peanut butter
         Birds
         Don Cheadle
       </pre>
-      <form>
-        <h3>Search by keyword(s), or by trending or random</h3>
+    <form>
+      <h3>Search by keyword(s), or by trending or random</h3>
+      <div class="form-group" id="keywordInput">
         <label for="keyword">Enter keyword(s):</label>
         <input id="keyword" type="text" name="keyword" required>
-        <br>
+      </div>
+      <br>
+      <div id="radioButtons">
         <label>
           <input type="radio" name="search" value="trending">
           Trending
@@ -27,10 +32,17 @@
           Random
         </label>
         <br>
-        <button type="submit" class="btn-success" id="searchKeyword">Search GIFs</button>
-      </form>
+        <label>
+          <input type="radio" name="search" value="byKeyword">
+          Keyword
+        </label>
+      </div>
       <br>
-      <div id="showGifs"></div>
-    </div>
-  </body>
+      <button type="submit" class="btn-success" id="searchKeyword">Search GIFs</button>
+    </form>
+    <br>
+    <div id="showGifs"></div>
+  </div>
+</body>
+
 </html>
