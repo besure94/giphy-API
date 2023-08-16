@@ -13,10 +13,23 @@
         Don Cheadle
       </pre>
       <form>
-        <label for="keyword">Enter a keyword(s):</label>
+        <h3>Search by keyword(s), or by trending or random</h3>
+        <label for="keyword">Enter keyword(s):</label>
         <input id="keyword" type="text" name="keyword" required>
-        <button type="submit" class="btn-success" id="searchKeyword">Find GIFs now!</button>
+        <br>
+        <label>
+          <input type="radio" name="search" value="trending">
+          Trending
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="search" value="random">
+          Random
+        </label>
+        <br>
+        <button type="submit" class="btn-success" id="searchKeyword">Search GIFs</button>
       </form>
+      <br>
       <div id="showGifs"></div>
     </div>
   </body>

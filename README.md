@@ -33,3 +33,12 @@
 * _should go here_
 
 ## License
+
+// add functionality for trending and random endpoints
+1. Add radio button for trending and random.
+2. Add JS code for getting search type on form submission (in handleFormSubmission function)
+3. Hand search type to API call and create parameter for search type.
+4. Write conditional logic to alter URL based on user input.
+  * use "let"
+
+// add a try...catch block
