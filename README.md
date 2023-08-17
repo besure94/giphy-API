@@ -1,8 +1,8 @@
-# Template Repository
+# Giphy API
 
-#### Use this template repository for starting new projects. Update with new technologies and packages when necessary.
+#### An application that can generate GIFs from Giphy for a user.
 
-#### By (Your Name Here)
+#### By Brian Scherner
 
 ## Technologies Used
 
@@ -11,34 +11,26 @@
 * Bootstrap
 * JavaScript
 * Webpack
-* Webpack-cli
 * Node Package Manager
-* .babelrc
-* .eslintrc
 
 ## Description
 
+This application allows users to generate GIFs by searching for a keyword(s), or by selecting "random" or "trending".
+
 ## Setup/Installation Requirements
 
-* Select the green "Use this template" button and select "create a new repository".
-* In the terminal, go to your project folder and run the command $ npm install to install node_modules.
-* Run the command $ npm run build to bundle together JS files.
-* Enter the command $ npm run start to start a live development server.
-* Enter the command $ npm run lint to check for errors.
-* Enter the command $ npm run test to test business logic.
+* Select the green "Code" button, clone this repository to your desktop, and open it in VS Code.
+* Open a new terminal, go to the root directory, and run the command `$ npm install` to install node_modules.
+* In the root directory, run the command `$ npm run build` to bundle together JS files.
+* In the root directory, enter the command `$ npm run start` to start a live development server.
+* In the root directory, enter the command `$ npm run lint` to check for errors.
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+Application functions as intended. At some point I would like to work on adjusting the aspect ratios by refactoring my code.
 
 ## License
 
-// add functionality for trending and random endpoints
-1. Add radio button for trending and random.
-2. Add JS code for getting search type on form submission (in handleFormSubmission function)
-3. Hand search type to API call and create parameter for search type.
-4. Write conditional logic to alter URL based on user input.
-  * use "let"
+MIT
 
-// add a try...catch block
+Copyright(c) 2023 Brian Scherner
