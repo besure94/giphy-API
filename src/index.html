@@ -16,27 +16,25 @@
       </pre>
     <form>
       <h3>Search by keyword(s), or by trending or random</h3>
-      <div class="form-group" id="keywordInput">
+      <div class="form-group hidden" id="keywordInput">
         <label for="keyword">Enter keyword(s):</label>
-        <input id="keyword" type="text" name="keyword" required>
+        <input id="keyword" type="text" name="keyword">
       </div>
       <br>
-      <div id="radioButtons">
         <label>
-          <input type="radio" name="search" value="trending">
+          <input type="radio" class="radioButtons" name="search" value="trending">
           Trending
         </label>
         <br>
         <label>
-          <input type="radio" name="search" value="random">
+          <input type="radio" class="radioButtons" name="search" value="random">
           Random
         </label>
         <br>
         <label>
-          <input type="radio" name="search" value="byKeyword">
+          <input type="radio" class="radioButtons" name="search" value="byKeyword">
           Keyword
         </label>
-      </div>
       <br>
       <button type="submit" class="btn-success" id="searchKeyword">Search GIFs</button>
     </form>

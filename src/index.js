@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
 function getGif(keyword, searchType) {
+  console.log(keyword);
   let request = new XMLHttpRequest();
   let url = `http://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=${process.env.API_KEY}`;
   if (searchType === "trending") {
@@ -52,26 +53,32 @@ function printElements(apiResponse) {
 function checkRadioButtons(event) {
   event.preventDefault();
   const radioButtonValue = document.querySelector("input[name='search']:checked").value;
+  const keywordInput = document.getElementById("keywordInput");
   if (radioButtonValue === "byKeyword") {
-    const keywordInput = document.getElementById("keywordInput");
-    keywordInput.removeAttribute("class", "form-group hidden");
+    keywordInput.removeAttribute("class", "hidden");
+  } else {
+    keywordInput.setAttribute("class", "hidden");
   }
 }
 
 function handleFormSubmission(event) {
   event.preventDefault();
+  const keyword = document.querySelector("#keyword").value;
   const trendingOrRandom = document.querySelector("input[name='search']:checked").value;
   if (trendingOrRandom !== "byKeyword") {
     console.log(trendingOrRandom);
     getGif(null, trendingOrRandom);
-  } else {
-    const keyword = document.querySelector("#keyword").value;
-    console.log(keyword);
+  } else if (trendingOrRandom === "byKeyword" && keyword !== "") {
+    console.log("form submission: ", keyword);
     getGif(keyword);
+  } else {
+    document.querySelector("#showGifs").innerHTML = "Please enter a keyword!";
   }
 }
 
 window.addEventListener("load", function () {
-  // document.querySelector("#radioButtons").addEventListener("click", checkRadioButtons);
+  document.querySelectorAll(".radioButtons").forEach(button => {
+    button.addEventListener("change", checkRadioButtons);
+  });
   document.querySelector("form").addEventListener("submit", handleFormSubmission);
 });
