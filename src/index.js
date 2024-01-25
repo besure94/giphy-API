@@ -30,7 +30,7 @@ function printError(apiResponse, keyword) {
 }
 
 function createImage(url) {
-  let gifsDiv = document.querySelector("div#showGifs")
+  let gifsDiv = document.querySelector("div#showGifs");
   let img = document.createElement("img");
   img.src = url;
   img.height = "300";
@@ -39,7 +39,7 @@ function createImage(url) {
 }
 
 function printElements(apiResponse) {
-  let gifsDiv = document.querySelector("div#showGifs")
+  let gifsDiv = document.querySelector("div#showGifs");
   gifsDiv.innerHTML = null;
   if (Array.isArray(apiResponse.data)) {
     for (let index = 0; index < 12; index++) {

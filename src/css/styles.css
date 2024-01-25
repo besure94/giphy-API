@@ -1,7 +1,56 @@
 body {
-	background-color: #8d99ae;
+	background-color: #000000;
+}
+
+button {
+  background-color: #59cd90;
+  color: #000000;
+  font-weight: 700;
+  font-size: larger;
+}
+
+h1 {
+  color: #59cd90;
+  font-weight: 900;
+}
+
+h3 {
+  color: #59cd90;
+  font-weight: 700;
 }
 
 .hidden {
   display: none;
+}
+
+hr {
+  border: 1px solid #ee6352;
+}
+
+input {
+  font-weight: 700;
+}
+
+label {
+  color: #00a5cf;
+  font-weight: 700;
+  font-size: larger;
+}
+
+p {
+  color: #00a5cf;
+  font-weight: 700;
+  font-size: larger;
+}
+
+pre {
+  color: #00a5cf;
+  font-weight: 700;
+  font-size: larger;
+}
+
+#showGifs {
+  color: #00a5cf;
+  font-size: larger;
+  font-weight: 700;
 }
