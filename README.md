@@ -15,7 +15,7 @@
 
 ## Description
 
-This application allows users to generate GIFs by searching for a keyword(s), or by selecting "random" or "trending".
+This application allows users to generate GIFs by searching for a keyword(s), or by selecting "random" or "trending". Please use the `main` branch when using this application.
 
 ## Setup/Installation Requirements
 
