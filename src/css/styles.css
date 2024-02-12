@@ -1,22 +1,26 @@
 body {
-	background-color: #000000;
+	background-color: #0a0d08;
 }
 
 button {
-  background-color: #59cd90;
+  background-color: #d90429;
   color: #000000;
   font-weight: 700;
-  font-size: larger;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  text-align: center;
 }
 
 h1 {
-  color: #59cd90;
+  color: #00d07c;
   font-weight: 900;
-}
-
-h3 {
-  color: #59cd90;
-  font-weight: 700;
+  text-align: center;
+  font-size: 4rem;
+  font-family: sans-serif;
 }
 
 .hidden {
@@ -24,7 +28,7 @@ h3 {
 }
 
 hr {
-  border: 1px solid #ee6352;
+  border: 1px solid #d90429;
 }
 
 input {
@@ -32,25 +36,21 @@ input {
 }
 
 label {
-  color: #00a5cf;
+  color: #3a86ff;
   font-weight: 700;
-  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.75rem;
 }
 
 p {
-  color: #00a5cf;
-  font-weight: 700;
-  font-size: larger;
-}
-
-pre {
-  color: #00a5cf;
+  color: #00d07c;
   font-weight: 700;
   font-size: larger;
 }
 
 #showGifs {
-  color: #00a5cf;
-  font-size: larger;
+  color: #3a86ff;
   font-weight: 700;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.75rem;
 }

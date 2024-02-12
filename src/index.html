@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
   <title>Giphy</title>
 </head>
-
 <body>
   <div class="container">
-    <h1>Search for GIFs from Giphy</h1>
-    <hr>
-    <p>Simply select "trending", "random", or enter a keyword(s), such as:</p>
-    <pre>
-        Peanut butter
-        Birds
-        Don Cheadle
-      </pre>
+    <h1>Find GIFs from Giphy</h1>
     <hr>
     <form>
-      <h3>The best GIFs are just a few clicks away! Ready to get started?</h3>
       <div class="form-group hidden" id="keywordInput">
         <label for="keyword">Enter keyword(s):</label>
         <input id="keyword" type="text" name="keyword">
@@ -41,9 +31,8 @@
       <br>
       <button type="submit" class="btn-success" id="searchKeyword">Search GIFs</button>
     </form>
-    <br>
+    <hr>
     <div id="showGifs"></div>
   </div>
 </body>
-
 </html>
