@@ -42,7 +42,7 @@ function printElements(apiResponse) {
   let gifsDiv = document.querySelector("div#showGifs");
   gifsDiv.innerHTML = null;
   if (Array.isArray(apiResponse.data)) {
-    for (let index = 0; index < 12; index++) {
+    for (let index = 0; index < 50; index++) {
       createImage(apiResponse.data[index].images.original.url);
     }
   } else {
