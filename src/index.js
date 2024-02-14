@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
 function getGif(keyword, searchType) {
-  console.log(keyword);
   let request = new XMLHttpRequest();
   let url = `http://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=${process.env.API_KEY}`;
   if (searchType === "trending") {
@@ -66,10 +65,8 @@ function handleFormSubmission(event) {
   const keyword = document.querySelector("#keyword").value;
   const trendingOrRandom = document.querySelector("input[name='search']:checked").value;
   if (trendingOrRandom !== "byKeyword") {
-    console.log(trendingOrRandom);
     getGif(null, trendingOrRandom);
   } else if (trendingOrRandom === "byKeyword" && keyword !== "") {
-    console.log("form submission: ", keyword);
     getGif(keyword);
   } else {
     document.querySelector("#showGifs").innerHTML = "Please enter a keyword!";
